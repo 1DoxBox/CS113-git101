@@ -1,0 +1,27 @@
+เรื่อง loop and switch case
+1.while loop
+    expr1;                      <<< start(ตัวแปรที่เริ่ม)
+    while (expr2) {             <<< เงื่อนไขของ loop นั้นๆ
+        statement               <<< สิ่งที่จะทำ
+        expr3;                  <<< step (ตัวเพิ่มรอบ)
+    }
+
+2.for loop มีการทำงานที่คล้ายกับ while loop
+    for (expr1; expr2; expr3)   <<< เงื่อนไข (start(ตัวแปรที่เริ่ม), stop(ขอบเขตตัวแปร), step(ตัวเพิ่มรอบตัวแปร))
+        statement               <<< สิ่งที่จะทำ
+    
+3.infinite loop สามารถทำได้โดย
+    for (;;) {
+        ...
+    }
+    หลักการทำงานคลล้ายกับ for loop ทั่วไป
+
+4.switch case
+    switch (expression) {   <<< เงื่อนไขส่งไปใน case
+        case const-expr:    <<< มีหลักการด้วย if else ถ้าเป็น true จะเข้า statement แต่ถ้าเป็น false จะไป case ถัดไป
+            statements      <<< ตัวกระทำ (ถ้าเป็น True จะเข้า state นี้)
+        case const-expr:
+            statements
+        default: 
+            statements      <<< ถ้าเงื่อนไขเป็นเท็จทั้งหมด จะเข้าเงื่อนไขนี้ (เปรียบเสมือน else ของ if-else)
+    }
