@@ -1,0 +1,22 @@
+เรื่อง Git Basic and Separate Compilation (การคอมไพล์แยกส่วน)
+1. Git Basic
+    คำสั่งต่างๆที่ใช้เช่น
+    1.git --version  สำหรับตรวจสอบ version ของโปรแกรม git
+    2.git init  เป็นการสร้าง folder .git
+    3.git status  ไว้สำหรับตรวจสอบสถานะของไฟล์
+    4.git add ชื่อไฟล์   การเพิ่มไฟล์ก่อนที่จะนำไป commit
+    5.git config user.name <name> การตั้งชื่อเพื่อระบุผู้ commit 
+    6.git config user.email <email> การตั้งอีเมลเพื่อระบุผู้ commit 
+    6.git commit -m <message> commit file เพื่อเก็บเป็น checkpoint
+    7.git log --all --decorate --oneline --graph เพื่อดู checkpoint ทั้งหมด
+    8.git remote add <ชื่อ remote เช่น origin> <git url>  เชื่อม local repository กับ github
+    9.git push -u origin master  ส่งไฟล์และประวัติไปเก็บที่ github
+    10.git clone <git url>  การนำไฟล์จาก github มาทำงานต่อ
+
+2.การคอมไพล์แยกส่วน
+    การนำ code ของ 2 โปรแกรมมารวมกัน เช่น ไฟล์1.c กับ ไฟล์2.c นำมารวมกัน
+    จากนั้นนำมาคอมไพล์โดยอย่างแรกสร้างไฟล์ object ของทั้งสองไฟล์โดคำสั่ง
+        gcc -c ไฟล์1.c      แล้วจะได้เป็น file1.o
+        gcc -c ไฟล์2.c      แล้วจะได้เป็น file2.o
+    จากนั้นนำไฟล์ทั้งสองที่ได้มา มาทำเป็นไฟล์ .exe
+
