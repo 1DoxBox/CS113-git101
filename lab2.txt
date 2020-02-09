@@ -1,0 +1,10 @@
+เรื่อง if else
+1.if else
+    if (expression1)        <<< จะเข้าเงื่อนไขนี้เป็นเงื่อนไขแรก
+        statement1          <<< ถ้าเป็นจริงจะเข้า state นี้ ถ้าเป็น false จะไปกรณีต่อไป
+    else if (expression2)
+        statement2
+    else if (expression3)
+        statement3
+    else                    <<< ถ้าเงื่อนไขเป็นเท็จทั้งหมด จะเข้าเงื่อนไขนี้
+        statement4
