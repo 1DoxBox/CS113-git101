@@ -1,0 +1,17 @@
+เรื่อง Function
+1.Function Definition
+    return-value-type Function-name (parameter-list) <<< กำหนดชื่อฟังก์ชัน และ parameter
+    {
+        declarations                                 <<< ประกาศตัวแปร
+
+        statement                                    <<< ตัวกระทำ
+        return                                       <<< ส่งค่าไปเก็บในฟังก์ชัน
+    }
+การเรียกใช้ฟังก์ชันซ้ำ หรือเรียกว่า Rescursion คือการเรียกใช้ฟังก์ชันซ้ำโดยการไม่ใช้ loop
+
+2.Standard Library Functions and Math Library Functions 
+    - standard library functions เช่น printf(), scanf() และ getchar
+    - math library functions เช่น sqrt, exp และ log
+    หากเราต้องการใช้ฟังก์ชันใน math library เราควรต้อง #include <math.h> ด้วย เช่นฟังก์ชัน sin(), cos(), sqrt(), log(), pow(), exp(), floor(), ceil(), fmod()
+
+3.Using Functions as Parameter to Functions ค่าที่ได้จากการเรียกใช้ฟังก์ชันสามารถส่งผ่านไปเป็นพารามีเตอร์ของอีกฟังก์ชันได้
