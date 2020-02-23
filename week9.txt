@@ -1,0 +1,38 @@
+สรุปเรื่อง branch merge conflict
+1.คำสั่งในการสร้างและแยก branch
+    - git clone <git-url>           <<< เพื่อ clone git drepository ที่เคยสร้างมาใช้
+    - git branch <branch-name>      <<< เพื่อสร้าง branch
+    - git branch                    <<< เพื่อตรวจสอบว่ามี branch ใดบ้าง
+    - git checkout <name>           <<< เพื่อเปลี่ยน branch ไปที่ branch ที่สร้างไว้
+
+2.การ Merg branch
+    2.1 คำสั่งในการเพิ่มไฟล์ใน branch และ เพิ่มไฟล์ .txt ใน branch master
+    - git checkout <name>           <<< เปลี่ยน branch และจะได้ไฟล์.txt เพิ่มมา
+    - git add <name.txt>            <<< เพิ่อ add ไฟล์
+    - git commit -m "name"          <<< เพื่อ commit ไฟล์
+    - git log --all --decorate --oneline --graph     <<< เพื่อตรวจสอบ checkpoint
+    - git push origin master        <<< เพื่อ push master ขึ้น github
+    - git merge <name>              <<< เพื่อเอา branch ไปรวมกับ master
+
+3.คำสั่งการ pull แบบไม่มี conflict
+    - cd <name folder>              <<< เพื่อเปลี่ยน directory
+    - git clone <git-url> <folder>  <<< เพื่อ clone git จาก directory นึง มายัง directory ที่พึ่งสร้าง
+    - git add <name.txt>            <<< เพิ่อ add ไฟล์
+    - git commit -m "name"          <<< เพื่อ commit ไฟล์
+    - git push origin master        <<< เพื่อ push master ขึ้น github
+    - ls -l                         <<< แสดงรายชื่อ folder ใน directory นั้น
+
+4.คำสั่งการ pull แบบมี conflict 
+    4.1 Conflict หรือความขัดแย้ง เกิดจากกการแก้ไขข้อมูลในไฟล์เดิม บรรทัดเดิม แต่อยู่ต่าง Branch กัน
+เมื่อ merge แล้ว ทำให้ git ตัดสินใจไม่ได้ว่าจะใช้ข้อมูลจาก branch ใด
+    - cd <name folder>              <<< เพื่อเปลี่ยน directory
+    - git push origin master        <<< เพื่อ push master ขึ้น github
+    - git status                    <<< เพื่อ check สถานะ git
+    - git commit -m "name"          <<< เพื่อ commit ไฟล์
+    - git push origin master        <<< เพื่อ push master ขึ้น github
+    - git add <name.txt>            <<< เพิ่อ add ไฟล์
+    - git pull origin master        <<< เพื่อดึงไฟล์จาก origin master
+    - git log --all --decorate --oneline --graph     <<< เพื่อตรวจสอบ checkpoint
+
+
+
